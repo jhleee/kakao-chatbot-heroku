@@ -18,12 +18,12 @@ def keyboard_btn():
                     .add("C")
     return Keyboard(BUTTONS, btns)
 
-@app.route('/keyboard/text', methods=["GET"])
+@app.route('/keyboard', methods=["GET"])
 @as_json_p
 def keyboard_txt():
     return Keyboard(TEXT)
 
-@app.route('/msg')
+@app.route('/message', methods=["POST"])
 @as_json_p
 def msg():
     img_url = "https://dummyimage.com/600x400/000/ffffff.gif&text=Hello+World+!"
